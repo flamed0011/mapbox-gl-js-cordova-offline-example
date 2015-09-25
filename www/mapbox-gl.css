@@ -2,7 +2,7 @@
     font-family: 'mapboxgl';
     src:url('font/icon.eot?v=1');
     src:url('font/icon.eot?v=1#iefix-lwq1d6') format('embedded-opentype'),
-        url('font/icon.woff?v=1') format('woff');
+    url('font/icon.woff?v=1') format('woff');
     font-weight: normal;
     font-style: normal;
 }
