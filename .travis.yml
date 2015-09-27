@@ -16,7 +16,7 @@ before_install:
 - npm install -g ionic
 - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 # https://github.com/systemed/tilemaker
-- sudo add-apt-repository ppa:afrank/boost
+- sudo add-apt-repository -y ppa:afrank/boost
 - sudo apt-get install liblua5.1-0 liblua5.1-0-dev libprotobuf-dev libsqlite3-dev protobuf-c-compiler
 - sudo apt-get update -q
 - sudo apt-get install libboost1.57-all-dev
