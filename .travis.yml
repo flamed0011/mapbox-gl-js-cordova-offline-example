@@ -15,8 +15,6 @@ before_install:
   - npm install -g ionic
 script:
 #- cd mapdis
-  - mkdir www
-  - touch www/empty
   - mkdir platforms
   - cordova -v
   - ionic info
