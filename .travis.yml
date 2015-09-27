@@ -18,11 +18,11 @@ before_install:
 # https://github.com/systemed/tilemaker
 - sudo add-apt-repository -y ppa:afrank/boost
 - sudo apt-get update -q
-- sudo apt-get install install build-essential 
-- sudo apt-get install install liblua5.1-0
-- sudo apt-get install install iblua5.1-0-dev
-- sudo apt-get install install libprotobuf-dev
-- sudo apt-get install install libsqlite3-dev
+- sudo apt-get install build-essential 
+- sudo apt-get install liblua5.1-0
+- sudo apt-get install iblua5.1-0-dev
+- sudo apt-get install libprotobuf-dev
+- sudo apt-get install libsqlite3-dev
 - sudo apt-get install install protobuf-compiler
 - sudo apt-get install libboost1.57-all-dev
 - git clone https://github.com/rpavlik/luabind.git
