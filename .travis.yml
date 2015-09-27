@@ -18,7 +18,7 @@ before_install:
 - git checkout -qf $LUA_VERSION
 - cmake .
 - make
-- sudo make install
+- sudo make install 
 - cd ../
 script:
 - cordova -v
