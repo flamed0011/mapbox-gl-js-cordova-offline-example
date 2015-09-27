@@ -27,6 +27,7 @@ before_install:
 - sudo apt-get install libboost1.57-all-dev
 - sudo apt-get install locate
 - sudo updatedb
+- locate bootstrap.sh
 - locate jam
 - git clone https://github.com/rpavlik/luabind.git
 - cd luabind
