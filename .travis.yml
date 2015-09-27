@@ -16,7 +16,7 @@ before_install:
 - npm install -g ionic
 - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 # https://github.com/systemed/tilemaker
-- sudo add-apt-repository -y ppa:afrank/boost
+- sudo add-apt-repository ppa:boost-latest/ppa
 - sudo apt-get update -q
 - sudo apt-get install build-essential 
 - sudo apt-get install liblua5.1-0
@@ -26,9 +26,11 @@ before_install:
 - sudo apt-get install protobuf-compiler
 - sudo apt-get install libboost1.57-all-dev
 - git clone https://github.com/rpavlik/luabind.git
+- export BOOST_ROOT="/usr/include/boost"
 - cd luabind
 - sudo ln -s /usr/lib/x86_64-linux-gnu/liblua5.1.so /usr/lib/
 - ls /usr/include/boost 
+- sudo bjam install
 - sudo ln -s /usr/local/lib/libluabindd.so /usr/local/lib/libluabind.so
 - sudo ldconfig
 script:
