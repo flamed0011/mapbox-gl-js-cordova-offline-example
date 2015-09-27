@@ -20,9 +20,9 @@ before_install:
 - sudo apt-get install libboost1.57-all-dev
 - git clone https://github.com/rpavlik/luabind.git
 - cd luabind
-- ln -s /usr/lib/x86_64-linux-gnu/liblua5.1.so /usr/lib/
+- sudo ln -s /usr/lib/x86_64-linux-gnu/liblua5.1.so /usr/lib/
 - bjam install
-- ln -s /usr/local/lib/libluabindd.so /usr/local/lib/libluabind.so
+- sudo ln -s /usr/local/lib/libluabindd.so /usr/local/lib/libluabind.so
 - ldconfig
 script:
 - git clone https://github.com/flamed0011/tilemaker.git
