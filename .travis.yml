@@ -28,7 +28,6 @@ before_install:
 - git clone https://github.com/rpavlik/luabind.git
 - cd luabind
 - sudo ln -s /usr/lib/x86_64-linux-gnu/liblua5.1.so /usr/lib/
-- ls /usr/local/boost_1_57_0
 - ls /usr/include/boost 
 - sudo ln -s /usr/local/lib/libluabindd.so /usr/local/lib/libluabind.so
 - sudo ldconfig
