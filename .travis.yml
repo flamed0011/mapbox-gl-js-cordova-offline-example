@@ -29,6 +29,7 @@ before_install:
 - sudo updatedb
 - locate b2
 - locate bjam
+- locate bost
 - git clone https://github.com/rpavlik/luabind.git
 - export BOOST_ROOT="/usr/include/boost"
 - cd luabind
