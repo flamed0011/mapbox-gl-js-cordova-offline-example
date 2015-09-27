@@ -29,6 +29,7 @@ before_install:
 - export BOOST_ROOT="/usr/include/boost"
 - cd luabind
 - sudo ln -s /usr/lib/x86_64-linux-gnu/liblua5.1.so /usr/lib/
+- sudo b2 install
 - sudo ln -s /usr/local/lib/libluabindd.so /usr/local/lib/libluabind.so
 - sudo ldconfig
 script:
