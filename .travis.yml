@@ -25,6 +25,11 @@ before_install:
 - sudo apt-get install libsqlite3-dev
 - sudo apt-get install protobuf-compiler
 - sudo apt-get install libboost1.57-all-dev
+- mkdir -pv /tmp/boostinst
+- cd /tmp/boostinst/
+- wget -c 'http://sourceforge.net/projects/boost/files/boost/1.57.0/boost_1_57_0.tar.bz2/download'
+- tar xf download
+- ls
 - git clone https://github.com/rpavlik/luabind.git
 - cd luabind
 - sudo ln -s /usr/lib/x86_64-linux-gnu/liblua5.1.so /usr/lib/
