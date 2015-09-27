@@ -14,14 +14,12 @@ before_install:
   - npm install -g cordova
   - npm install -g ionic
 script:
-#- cd mapdis
-  - mkdir platforms
   - cordova -v
   - ionic info
   - ionic browser list
   - ionic browser add crosswalk@14.42.334.0
   - cordova plugin add cordova-sqlite-storage
-  - grunt build
+  - ionic build android
   - ls platforms/android/build/outputs/apk/ 
   - "/bin/cp platforms/android/build/outputs/apk/android-armv7-debug.apk dev/android-armv7-debug.apk"
   - sh ./dev/scripts/github.sh
