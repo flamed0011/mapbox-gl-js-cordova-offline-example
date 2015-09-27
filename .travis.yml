@@ -25,7 +25,7 @@ before_install:
 - sudo ln -s /usr/lib/x86_64-linux-gnu/liblua5.1.so /usr/lib/
 - sudo apt-get install locate
 - sudo updatedb
-- locate bjam
+- sudo locate bjam
 - sudo b2 install
 - sudo ln -s /usr/local/lib/libluabindd.so /usr/local/lib/libluabind.so
 - ldconfig
