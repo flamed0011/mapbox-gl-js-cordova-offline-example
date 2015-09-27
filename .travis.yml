@@ -37,6 +37,7 @@ script:
 - cd dev/tilemaker
 - make
 - make install
+- tilemaker --help
 - cordova -v
 - ionic info
 - ionic browser list
