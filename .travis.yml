@@ -31,10 +31,10 @@ before_install:
 - tar -xjf boost.tar.bz2
 - rm boost.tar.bz2
 - export BOOST_ROOT=$(pwd)/boost
+- ls $(pwd)/boost
 - git clone https://github.com/rpavlik/luabind.git
 - cd luabind
 - sudo ln -s /usr/lib/x86_64-linux-gnu/liblua5.1.so /usr/lib/
-- ls $BOOST_ROOT
 - sudo bjam install
 - sudo ln -s /usr/local/lib/libluabindd.so /usr/local/lib/libluabind.so
 - sudo ldconfig
