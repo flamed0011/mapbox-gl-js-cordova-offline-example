@@ -13,14 +13,21 @@ before_install:
 - nvm install 0.12
 - npm install -g cordova
 - npm install -g ionic
-- git clone https://github.com/LuaDist/lua.git --quiet
-- cd lua/
-- git checkout -qf $LUA_VERSION
-- cmake .
-- make
-- sudo make install 
-- cd ../
+- apt-get install build-essential liblua5.1-0 liblua5.1-0-dev libprotobuf-dev libsqlite3-dev protobuf-compiler
+- add-apt-repository ppa:ostogvin/tjo-develop
+- apt-get update
+- apt-get install libboost1.58-all-dev
+- git clone https://github.com/rpavlik/luabind.git
+- cd luabind
+- ln -s /usr/lib/x86_64-linux-gnu/liblua5.1.so /usr/lib/
+- bjam install
+- ln -s /usr/local/lib/libluabindd.so /usr/local/lib/libluabind.so
+- ldconfig
 script:
+- git clone https://github.com/flamed0011/tilemaker.git
+- cd tilemaker
+- make
+- make install
 - cordova -v
 - ionic info
 - ionic browser list
