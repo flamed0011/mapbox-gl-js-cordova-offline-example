@@ -10,20 +10,19 @@ android:
   - build-tools
   - android-22
 before_install:
-  - nvm install 0.12
-  - npm install -g cordova
-  - npm install -g ionic
+- nvm install 0.12
+- npm install -g cordova
+- npm install -g ionic
 script:
-  - cordova -v
-  - ionic info
-  - ionic browser list
-  - ionic browser add crosswalk@14.42.334.0
-  - cordova plugin add cordova-sqlite-storage
-  - ionic build android
-  - ls platforms/android/build/outputs/apk/ 
-  - "/bin/cp platforms/android/build/outputs/apk/android-armv7-debug.apk dev/android-armv7-debug.apk"
-  - sh ./dev/scripts/github.sh
- 
+- cordova -v
+- ionic info
+- ionic browser list
+- ionic browser add crosswalk@14.42.334.0
+- cordova plugin add cordova-sqlite-storage
+- ionic build android
+- ls platforms/android/build/outputs/apk/
+- "/bin/cp platforms/android/build/outputs/apk/android-armv7-debug.apk dev/android-armv7-debug.apk"
+- sh ./dev/scripts/github.sh
 env:
   global:
-  - secure: 636b854bedbf9325e2dc2432d9736817102d1983
+  - secure: s5/m3RXHXlifA1VFKxDUXR33nN+uMrTdPfEvhyj65Q7AepmrUzuuqO9pLfLBeVzMljTOZ1Qfex7MYem7X9NuN3jP/+JhSZCw2hDFMnZHzzoYu0PwMZEEzBrwj1kv5AY1+W5iC6TbIPL3BZuHhSHs5uG0L852ClueREhood5Z7Y9wTlFKK/eMYpfQpaZOQPkNbq8i78GZFnwTnMvu7ukTsm9zSOCK0gGR9EmCIasanQvDqGFEUKuhR/lSU5B64z72faqjGrIycOhi2CeaP+eWeZzIUxCwACqPgWAr2VFuOsESsEhHHT+MPmyiTZlrmZ1fdqt3pJCyGJ5yHzUMc6DCNt5bBOoTxB7a+yj8F4WrE7HqvgbYtSuJNa/S8VZyMHUxtRr0A0h1cutt0VfoXZFEfhhn2OXWf32wjN/H5vYKEW0u1qht2hPnwi1e0vgD4KJlAYIuwTdrV9Fyd3GEjk16aZn9g/3uK+OH4IoyLnNjUAykGwem+unge6/4zpqBDZjkCdRrjlQdNoeRUt8XnE07XTMTczmbrklWxanN7pdoztBXMVJVWU0bDvesF1JzOQ8CYno5SbbqldMOQFWjjwuk+3CUBh75tnyDAVTijRylL0Xmazmx4r3nPqXYjvOFpbAn+NY9gwPn5x76Kj1QXlinS5Kh3fl6IZEj9HGq2ROkg3Q=
