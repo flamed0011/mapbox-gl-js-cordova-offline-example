@@ -25,6 +25,9 @@ before_install:
 - sudo apt-get install libsqlite3-dev
 - sudo apt-get install protobuf-compiler
 - sudo apt-get install libboost1.57-all
+- sudo apt-get install locate
+- sudo updatedb
+- locate boost
 - git clone https://github.com/rpavlik/luabind.git
 - export BOOST_ROOT="/usr/include/boost"
 - cd luabind
