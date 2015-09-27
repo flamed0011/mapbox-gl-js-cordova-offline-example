@@ -14,27 +14,14 @@ before_install:
 - nvm install 0.12
 - npm install -g cordova
 - npm install -g ionic
-- sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-# https://github.com/systemed/tilemaker
-- sudo add-apt-repository -y ppa:afrank/boost
-- sudo apt-get update -q
-- sudo apt-get install build-essential 
-- sudo apt-get install liblua5.1-0
-- sudo apt-get install iblua5.1-0-dev
-- sudo apt-get install libprotobuf-dev
-- sudo apt-get install libsqlite3-dev
-- sudo apt-get install protobuf-compiler
-- sudo apt-get install locate
-- sudo updatedb
-- wget https://github.com/Viq111/travis-container-packets/releases/download/boost-1.57.0/boost.tar.bz2
-- tar -xjf boost.tar.bz2
-- rm boost.tar.bz2
-- export BOOST_ROOT=$(pwd)/boost
-- git clone https://github.com/rpavlik/luabind.git
-- cd luabind
-- sudo ln -s /usr/lib/x86_64-linux-gnu/liblua5.1.so /usr/lib/
-- sudo ln -s /usr/local/lib/libluabindd.so /usr/local/lib/libluabind.so
-- sudo ldconfig
+# build boost 1.57.0:
+- wget --trust-server-name http://sourceforge.net/projects/boost/files/boost/1.57.0/boost_1_57_0.tar.bz2/download # get boost
+- tar --bzip2 -xf boost_1_57_0.tar.bz2 # extract boost
+- cd boost_1_57_0
+- ./bootstrap.sh --with-python=PYTHON # 'PYTHON' is just a variable ((pre)defined in bootstrap.sh) with value 'python'
+- ./b2 -d0 stage threading=multi link=shared
+- sudo ./b2 install threading=multi link=shared
+- cd ..
 script:
 - git clone https://github.com/flamed0011/tilemaker.git dev/tilemaker
 - cd dev/tilemaker
