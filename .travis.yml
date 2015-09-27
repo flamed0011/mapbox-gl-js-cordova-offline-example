@@ -27,8 +27,10 @@ before_install:
 - sudo apt-get install libboost1.57-all-dev
 - sudo apt-get install locate
 - sudo updatedb
-- locate bootstrap.sh
-- locate jam
+- wget https://github.com/Viq111/travis-container-packets/releases/download/boost-1.57.0/boost.tar.bz2
+- tar -xjf boost.tar.bz2
+- rm boost.tar.bz2
+- export BOOST_ROOT=$(pwd)/boost
 - git clone https://github.com/rpavlik/luabind.git
 - cd luabind
 - sudo ln -s /usr/lib/x86_64-linux-gnu/liblua5.1.so /usr/lib/
