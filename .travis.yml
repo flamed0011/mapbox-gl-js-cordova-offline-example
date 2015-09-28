@@ -30,6 +30,7 @@ before_install:
 - INC=-I./mason_packages/.link/lib/
 - CPPFLAGS=-I./mason_packages/.link/include
 - LDFLAGS=-L./mason_packages/.link/lib
+- ln -s ./mason_packages/.link/bin/protoc protoc
 - ls ./mason_packages/.link/
 - ls ./mason_packages/.link/bin
 - ls ./mason_packages/.link/include
