@@ -36,6 +36,7 @@ before_install:
 - sudo ln -s /usr/bin/g++-4.8 /usr/bin/g++
 - ls ./mason_packages/.link/include
 - INC=-I./mason_packages/.link/lib/
+- CPATH=./mason_packages/.link/include
 - CPPFLAGS=-I./mason_packages/.link/include
 - LDFLAGS=-L./mason_packages/.link/lib
 - gcc -v
