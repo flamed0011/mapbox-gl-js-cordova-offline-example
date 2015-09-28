@@ -31,11 +31,7 @@ before_install:
 - CPPFLAGS=-I./mason_packages/.link/include
 - LDFLAGS=-L./mason_packages/.link/lib
 - gcc -v
-- ln -s ./mason_packages/.link/bin/* .
-- ls ./mason_packages/.link/
-- ls ./mason_packages/.link/bin
-- ls ./mason_packages/.link/include
-- ls
+ -sudo ln -s ./mason_packages/.link/bin/* /usr/bin
 - make
 - make install
 - tilemaker --help
