@@ -22,7 +22,7 @@ before_install:
 - ~/.mason/mason install boost 1.58.0
 - ~/.mason/mason install lua 5.1.0
 - ~/.mason/mason install luabind_lua51 dev
-- ls /home/travis/build/flamed0011/mapbox-gl-js-cordova-offline-example/tilemaker/mason_packages/linux-x86_64/protobuf_c/1.1.0
+- ls mason_packages/linux-x86_64/protobuf_c/1.1.0
 - make
 - make install
 - tilemaker --help
