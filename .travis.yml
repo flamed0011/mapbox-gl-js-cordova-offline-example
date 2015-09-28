@@ -43,7 +43,7 @@ before_install:
 - g++ -v
 - export PATH=$PATH:$PWD/mason_packages/.link/bin
 - ls ./mason_packages/.link/include/
-- sudo ln -s ./mason_packages/.link/include/* /include
+- ls
 - make
 - make install
 - tilemaker --help
