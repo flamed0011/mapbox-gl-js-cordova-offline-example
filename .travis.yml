@@ -35,7 +35,7 @@ before_install:
 - ~/.mason/mason link luabind_lua524 dev
 - ~/.mason/mason install sqlite 3.8.8.1
 - ~/.mason/mason link sqlite 3.8.8.1
-- ~/.mason/mason mason ldflags lua 5.2.4
+- ~/.mason/mason ldflags lua 5.2.4
 - sudo apt-get install locate
 - sudo updatedb
 - rpm -ql lua |grep .so
