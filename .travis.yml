@@ -16,10 +16,14 @@ before_install:
 - npm install -g ionic
 - git clone -b master --single-branch https://github.com/mapbox/mason.git ~/.mason
 - git clone https://github.com/systemed/tilemaker.git
+- cd tilemaker
 - ~/.mason/mason install protobuf 2.6.1
 - ~/.mason/mason install boost 1.58.0
 - ~/.mason/mason install lua 5.1.0
 - ~/.mason/mason install luabind_lua51 dev
+- make
+- make install
+- tilemaker --help
 script:
 - cordova -v
 - ionic info
