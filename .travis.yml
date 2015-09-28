@@ -37,6 +37,7 @@ before_install:
 - sudo ln -s /usr/bin/g++-4.8 /usr/bin/g++
 
 - export CPATH=./mason_packages/.link/include
+- export LIBRARY_PATH=./mason_packages/.link/lib
 - export PATH=$PATH:$PWD/mason_packages/.link/bin
 - gcc -v
 - g++ -v
