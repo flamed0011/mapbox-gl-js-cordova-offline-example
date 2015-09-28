@@ -15,8 +15,7 @@ before_install:
 - npm install -g cordova
 - npm install -g ionic
 - git clone -b master --single-branch https://github.com/mapbox/mason.git ~/.mason
-- sudo ln -s ~/.mason/mason /usr/bin/mason
-- mason install boost 1.58
+- ~/.mason/mason install boost 1.58
 script:
 - cordova -v
 - ionic info
