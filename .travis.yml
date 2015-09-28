@@ -31,7 +31,7 @@ before_install:
 - CPPFLAGS=-I./mason_packages/.link/include
 - LDFLAGS=-L./mason_packages/.link/lib
 - ln -s ./mason_packages/.link/bin/protoc protoc
-- ln -s ./mason_packages/.link/bin .
+- ln -s ./mason_packages/.link/bin/* .
 - ls ./mason_packages/.link/
 - ls ./mason_packages/.link/bin
 - ls ./mason_packages/.link/include
