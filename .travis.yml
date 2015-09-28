@@ -35,6 +35,9 @@ before_install:
 - ~/.mason/mason link luabind_lua524 dev
 - ~/.mason/mason install sqlite 3.8.8.1
 - ~/.mason/mason link sqlite 3.8.8.1
+- sudo apt-get install locate
+- sudo updatedb
+- sudo locate liblua5.1.so
 - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 - sudo apt-get update; sudo apt-get install gcc-4.8 g++-4.8
 - sudo rm /usr/bin/gcc
