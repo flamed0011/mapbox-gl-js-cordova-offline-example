@@ -33,7 +33,7 @@ before_install:
 - sudo rm /usr/bin/gcc
 - sudo ln -s /usr/bin/gcc-4.8 /usr/bin/gcc
 - sudo rm /usr/bin/g++
-- sudo ln -s /usr/bin/g++-4.XXX /usr/bin/g++
+- sudo ln -s /usr/bin/g++-4.8 /usr/bin/g++
 - INC=-I./mason_packages/.link/lib/
 - CPPFLAGS=-I./mason_packages/.link/include
 - LDFLAGS=-L./mason_packages/.link/lib
