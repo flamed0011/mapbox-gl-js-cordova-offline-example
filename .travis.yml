@@ -27,8 +27,8 @@ before_install:
 - ~/.mason/mason link lua 5.1.0
 - ~/.mason/mason install luabind_lua51 dev
 - ~/.mason/mason link luabind_lua51 dev
+- INC=-I./mason_packages/.link/lib/
 - ls ./mason_packages/.link/
-- ls ./mason_packages/.link/lib/
 - make
 - make install
 - tilemaker --help
