@@ -11,6 +11,7 @@ android:
   - build-tools
   - android-22
 before_install:
+- if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
 - nvm install 0.12
 - npm install -g cordova
 - npm install -g ionic
