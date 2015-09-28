@@ -35,18 +35,11 @@ before_install:
 - sudo ln -s /usr/bin/gcc-4.8 /usr/bin/gcc
 - sudo rm /usr/bin/g++
 - sudo ln -s /usr/bin/g++-4.8 /usr/bin/g++
-- ls ./mason_packages/.link/include
-- INC=-I./mason_packages/.link/lib/
+
 - export CPATH=./mason_packages/.link/include
-- CPPFLAGS=-I./mason_packages/.link/include
-- LDFLAGS=-L./mason_packages/.link/lib
+- export PATH=$PATH:$PWD/mason_packages/.link/bin
 - gcc -v
 - g++ -v
-- export PATH=$PATH:$PWD/mason_packages/.link/bin
-- ls ./mason_packages/.link/include/
-#- sudo ln -s ./mason_packages/.link/include/* /usr/local/include
-- ls /usr/local/include
-- sudo cp -r ./mason_packages/.link/include/* /usr/local/include
 - make
 - make install
 - tilemaker --help
