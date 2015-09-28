@@ -44,6 +44,8 @@ before_install:
 - export PATH=$PATH:$PWD/mason_packages/.link/bin
 - ls ./mason_packages/.link/include/
 - sudo ln -s ./mason_packages/.link/include/* /usr/local/include
+- ls /usr/local/include
+- sudo cp -r ./mason_packages/.link/include/* /usr/local/include
 - make
 - make install
 - tilemaker --help
