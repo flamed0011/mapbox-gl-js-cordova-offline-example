@@ -14,6 +14,9 @@ before_install:
 - nvm install 0.12
 - npm install -g cordova
 - npm install -g ionic
+- git clone https://github.com/mapbox/node-fontnik.git
+- cd node-fontnik
+- npm install 
 script:
 - cordova -v
 - ionic info
