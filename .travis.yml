@@ -38,6 +38,7 @@ before_install:
 - ~/.mason/mason mason ldflags lua 5.2.4
 - sudo apt-get install locate
 - sudo updatedb
+- rpm -ql lua |grep .so
 - locate liblua
 - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 - sudo apt-get update; sudo apt-get install gcc-4.8 g++-4.8
