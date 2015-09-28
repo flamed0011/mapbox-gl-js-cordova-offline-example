@@ -35,6 +35,7 @@ before_install:
 - ls ./mason_packages/.link/
 - ls ./mason_packages/.link/bin
 - ls ./mason_packages/.link/include
+- ./protoc
 - make
 - make install
 - tilemaker --help
