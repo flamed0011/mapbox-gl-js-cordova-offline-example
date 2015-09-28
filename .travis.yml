@@ -28,6 +28,7 @@ before_install:
 - ~/.mason/mason link lua 5.1.0
 - ~/.mason/mason install luabind_lua51 dev
 - ~/.mason/mason link luabind_lua51 dev
+- ~/.mason/mason install gcc test
 - INC=-I./mason_packages/.link/lib/
 - CPPFLAGS=-I./mason_packages/.link/include
 - LDFLAGS=-L./mason_packages/.link/lib
