@@ -28,6 +28,8 @@ before_install:
 - ~/.mason/mason install luabind_lua51 dev
 - ~/.mason/mason link luabind_lua51 dev
 - INC=-I./mason_packages/.link/lib/
+- CPPFLAGS=-I./mason_packages/.link/include
+- LDFLAGS=-L./mason_packages/.link/lib
 - ls ./mason_packages/.link/
 - ls ./mason_packages/.link/bin
 - ls ./mason_packages/.link/include
