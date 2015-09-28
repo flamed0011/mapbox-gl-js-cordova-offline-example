@@ -15,7 +15,11 @@ before_install:
 - npm install -g cordova
 - npm install -g ionic
 - git clone -b master --single-branch https://github.com/mapbox/mason.git ~/.mason
+- git clone https://github.com/systemed/tilemaker.git
+- ~/.mason/mason install protobuf 2.6.1
 - ~/.mason/mason install boost 1.58.0
+- ~/.mason/mason install lua51
+- ~/.mason/mason install luabind
 script:
 - cordova -v
 - ionic info
