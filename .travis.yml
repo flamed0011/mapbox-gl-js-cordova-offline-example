@@ -19,7 +19,7 @@ before_install:
 - ~/.mason/mason install protobuf 2.6.1
 - ~/.mason/mason install boost 1.58.0
 - ~/.mason/mason install lua 5.1.0
-- ~/.mason/mason install luabind_lua51 e414c57bcb687bb3091b7c55bbff6947f052e46b
+- ~/.mason/mason install luabind_lua51-dev e414c57bcb687bb3091b7c55bbff6947f052e46b
 script:
 - cordova -v
 - ionic info
