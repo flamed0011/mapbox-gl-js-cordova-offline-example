@@ -30,13 +30,13 @@ before_install:
 - ~/.mason/mason install gcc test
 - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 - sudo apt-get update; sudo apt-get install gcc-4.8 g++-4.8
-- alias c++11="g++ -std=c++11"
 - sudo rm /usr/bin/gcc
 - sudo ln -s /usr/bin/gcc-4.8 /usr/bin/gcc
 - INC=-I./mason_packages/.link/lib/
 - CPPFLAGS=-I./mason_packages/.link/include
 - LDFLAGS=-L./mason_packages/.link/lib
 - gcc -v
+- g++ -v
 - export PATH=$PATH:$PWD/mason_packages/.link/bin
 - make
 - make install
