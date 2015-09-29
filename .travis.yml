@@ -57,7 +57,7 @@ install:
 - make
 - sudo make install
 - ls
-- ./tilemaker --config=../dev/tilemaker/config.json --process=../dev/tilemaker/process.lua ../dev/data/hamburg.osm.pbf --output=../dev/data/hamburg.mbtiles
+- ./tilemaker hamburg.osm.pbf hamburg.mbtiles
 - cd ..
 script:
 - cordova -v
