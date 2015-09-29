@@ -29,16 +29,16 @@ before_install:
 - ~/.mason/mason link boost_libsystem 1.57.0
 - ~/.mason/mason install boost_libprogram_options 1.57.0
 - ~/.mason/mason link boost_libprogram_options 1.57.0
-- ~/.mason/mason install lua 5.2.4
-- ~/.mason/mason link lua 5.2.4
-- ~/.mason/mason install luabind_lua524 dev
-- ~/.mason/mason link luabind_lua524 dev
+- ~/.mason/mason install lua 5.1.0
+- ~/.mason/mason link lua 5.1.0
+- ~/.mason/mason install luabind_lua510 dev
+- ~/.mason/mason link luabind_lua510 dev
 - ~/.mason/mason install sqlite 3.8.8.1
 - ~/.mason/mason link sqlite 3.8.8.1
 - ~/.mason/mason ldflags lua 5.2.4
 - sudo apt-get install locate
 - sudo updatedb
-- locate liblua
+- locate lua
 - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 - sudo apt-get update; sudo apt-get install gcc-4.8 g++-4.8
 - sudo rm /usr/bin/gcc
