@@ -33,9 +33,8 @@ before_install:
 - ~/.mason/mason link lua 5.1.0
 - ~/.mason/mason install luabind_lua51 dev
 - ~/.mason/mason link luabind_lua51 dev
-- ~/.mason/mason install sqlite 3.8.8.1
-- ~/.mason/mason link sqlite 3.8.8.1
-- ~/.mason/mason ldflags lua 5.1.0
+- ~/.mason/mason install sqlite 3.8.10.2
+- ~/.mason/mason link sqlite 3.8.10.2
 - sudo apt-get install locate
 - sudo updatedb
 - locate lua
@@ -54,7 +53,7 @@ before_install:
 - export PATH=$PATH:$PWD/mason_packages/.link/bin
 - gcc -v
 - g++ -v
-- make -pthread
+- make
 - make install
 - tilemaker --help
 script:
