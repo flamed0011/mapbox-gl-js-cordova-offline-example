@@ -56,7 +56,7 @@ install:
 - export PATH=$PATH:$PWD/mason_packages/.link/bin
 - make
 - sudo make install
-- ls
+- sudo ldconfig
 - ./tilemaker ../hamburg.osm.pbf --output=hamburg.mbtiles
 - cd ..
 script:
