@@ -48,6 +48,7 @@ before_install:
 - ls ./mason_packages/linux-x86_64/lua/5.1.0/lib
 - ls ./mason_packages/linux-x86_64/lua/5.1.0/lib/lua
 - ls ./mason_packages/linux-x86_64/lua/5.1.0/include
+- LUA_LIBS=-llua
 - export CPATH=./mason_packages/.link/include:./mason_packages/linux-x86_64/lua/5.1.0/lib
 - export LIBRARY_PATH=./mason_packages/.link/lib
 - export PATH=$PATH:$PWD/mason_packages/.link/bin
