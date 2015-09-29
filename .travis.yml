@@ -46,7 +46,7 @@ before_install:
 - sudo rm /usr/bin/g++
 - sudo ln -s /usr/bin/g++-4.8 /usr/bin/g++
 
-- export CPATH=./mason_packages/.link/include
+- export CPATH=./mason_packages/.link/include:./mason_packages/linux-x86_64/lua/5.1.0/lib
 - export LIBRARY_PATH=./mason_packages/.link/lib
 - export PATH=$PATH:$PWD/mason_packages/.link/bin
 - gcc -v
