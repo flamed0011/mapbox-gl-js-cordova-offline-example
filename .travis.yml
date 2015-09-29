@@ -31,11 +31,11 @@ before_install:
 - ~/.mason/mason link boost_libprogram_options 1.57.0
 - ~/.mason/mason install lua 5.1.0
 - ~/.mason/mason link lua 5.1.0
-- ~/.mason/mason install luabind_lua510 dev
-- ~/.mason/mason link luabind_lua510 dev
+- ~/.mason/mason install luabind_lua51 dev
+- ~/.mason/mason link luabind_lua51 dev
 - ~/.mason/mason install sqlite 3.8.8.1
 - ~/.mason/mason link sqlite 3.8.8.1
-- ~/.mason/mason ldflags lua 5.2.4
+- ~/.mason/mason ldflags lua 5.1.0
 - sudo apt-get install locate
 - sudo updatedb
 - locate lua
