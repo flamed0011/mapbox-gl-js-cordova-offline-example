@@ -52,7 +52,7 @@ before_install:
 - LDFLAGS='-ldl'
 - LDFLAGS='-Wl,--no-as-needed'
 - sed -i -e 's/lua5.1/lua/g1' Makefile
-- sed -i -e 's/c++11/c++11 -pthread -ldl/g' Makefile
+- sed -i -e 's/c++11/c++11 -pthread -Wl,--no-as-needed -ldl/g' Makefile
 - export CPATH=./mason_packages/.link/include
 - export LIBRARY_PATH=./mason_packages/.link/lib
 - export PATH=$PATH:$PWD/mason_packages/.link/bin
