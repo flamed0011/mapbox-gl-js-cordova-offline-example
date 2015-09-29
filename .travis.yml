@@ -56,8 +56,9 @@ install:
 - export PATH=$PATH:$PWD/mason_packages/.link/bin
 - make
 - sudo make install
+- ls
+- ./tilemaker --config=./dev/tilemaker/config.json --process=./dev/tilemaker/process.lua ./dev/data/hamburg.osm.pbf --output=./dev/data/hamburg.mbtiles
 - cd ..
-- tilemaker --config=./dev/tilemaker/config.json --process=./dev/tilemaker/process.lua ./dev/data/hamburg.osm.pbf --output=./dev/data/hamburg.mbtiles
 script:
 - cordova -v
 - ionic info
