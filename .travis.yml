@@ -54,11 +54,10 @@ install:
 - export CPATH=./mason_packages/.link/include
 - export LIBRARY_PATH=./mason_packages/.link/lib
 - export PATH=$PATH:$PWD/mason_packages/.link/bin
-- sudo ldconfig
 - make
 - sudo make install
 - ls
-- ./tilemaker hamburg.osm.pbf hamburg.mbtiles
+- ./tilemaker hamburg.osm.pbf --output=hamburg.mbtiles
 - cd ..
 script:
 - cordova -v
