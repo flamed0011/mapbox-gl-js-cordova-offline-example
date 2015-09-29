@@ -14,9 +14,20 @@ before_install:
 - nvm install 0.12
 - npm install -g cordova
 - npm install -g ionic
+# install gcc-4.9 and g++-4.9
+- sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+- sudo apt-get update; sudo apt-get install gcc-4.9 g++-4.9
+- sudo rm /usr/bin/gcc
+- sudo ln -s /usr/bin/gcc-4.9 /usr/bin/gcc
+- sudo rm /usr/bin/g++
+- sudo ln -s /usr/bin/g++-4.9 /usr/bin/g++
+
+install:
+# clone tilemaker
 - git clone -b master --single-branch https://github.com/mapbox/mason.git ~/.mason
 - git clone https://github.com/systemed/tilemaker.git
 - cd tilemaker
+# install dependencies
 - ~/.mason/mason install protobuf 2.6.1
 - ~/.mason/mason link protobuf 2.6.1
 - ~/.mason/mason install protobuf_c 1.1.0
@@ -37,28 +48,15 @@ before_install:
 - ~/.mason/mason link luabind_lua51 dev
 - ~/.mason/mason install sqlite 3.8.10.2
 - ~/.mason/mason link sqlite 3.8.10.2
-- sudo apt-get install locate
-- sudo updatedb
-- locate lua
-- sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-- sudo apt-get update; sudo apt-get install gcc-4.9 g++-4.9
-- sudo rm /usr/bin/gcc
-- sudo ln -s /usr/bin/gcc-4.9 /usr/bin/gcc
-- sudo rm /usr/bin/g++
-- sudo ln -s /usr/bin/g++-4.9 /usr/bin/g++
-- ls ./mason_packages/linux-x86_64/lua/5.1.0/lib
-- ls ./mason_packages/linux-x86_64/lua/5.1.0/lib/lua
-- ls ./mason_packages/linux-x86_64/lua/5.1.0/include
+# build and install tilemaker (modified compilation flags)
 - sed -i -e 's/lua5.1/lua/g' Makefile
 - sed -i -e 's/c++11/c++11 -pthread -Wl,--no-as-needed -ldl/g' Makefile
 - export CPATH=./mason_packages/.link/include
 - export LIBRARY_PATH=./mason_packages/.link/lib
 - export PATH=$PATH:$PWD/mason_packages/.link/bin
-- gcc -v
-- g++ -v
 - make
 - sudo make install
-- tilemaker --help
+
 script:
 - cordova -v
 - ionic info
