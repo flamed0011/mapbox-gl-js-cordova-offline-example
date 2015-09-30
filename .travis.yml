@@ -55,6 +55,7 @@ install:
 - export LIBRARY_PATH=./mason_packages/.link/lib
 - export PATH=$PATH:$PWD/mason_packages/.link/bin
 - sudo ldconfig
+- bjam install
 - make
 - sudo make install
 - ./tilemaker ../dev/data/hamburg.osm.pbf --output=../dev/data/hamburg.mbtiles
