@@ -11,9 +11,9 @@ android:
   - build-tools
   - android-22
 before_install:
-- nvm install 0.12
-- npm install -g cordova
-- npm install -g ionic
+#- nvm install 0.12
+#- npm install -g cordova
+#- npm install -g ionic
 # install gcc-4.9 and g++-4.9
 - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 - sudo apt-get update; sudo apt-get install gcc-4.9 g++-4.9
@@ -53,7 +53,9 @@ install:
 - export CPATH=./mason_packages/.link/include
 - export LIBRARY_PATH=./mason_packages/.link/lib
 - export PATH=$PATH:$PWD/mason_packages/.link/bin
-- make LUA_CFLAGS="$(pkg-config --cflags lua)" LUA_LIBS="$(pkg-config --libs lua)"
+- export LUA_CFLAGS=$(~/.mason/mason cflags luabind_lua51 dev)
+- export LUA_LIBS=$(~/.mason/mason ldflags luabind_lua51 dev)
+- make
 - sudo make install
 - cd ..
 - tilemaker --config=./config.json --process=./process.lua ./dev/data/hamburg.osm.pbf --output=./dev/data/hamburg.mbtiles
