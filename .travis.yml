@@ -44,8 +44,6 @@ install:
 - ~/.mason/mason link boost_libprogram_options 1.57.0
 - ~/.mason/mason install lua 5.1.0
 - ~/.mason/mason link lua 5.1.0
-- ~/.mason/mason install luabind_lua51 dev
-- ~/.mason/mason link luabind_lua51 dev
 - ~/.mason/mason install sqlite 3.8.10.2
 - ~/.mason/mason link sqlite 3.8.10.2
 # build and install tilemaker (modified compilation flags)
@@ -54,6 +52,13 @@ install:
 - export CPATH=./mason_packages/.link/include
 - export LIBRARY_PATH=./mason_packages/.link/lib
 - export PATH=$PATH:$PWD/mason_packages/.link/bin
+- git clone https://github.com/rpavlik/luabind.git
+- cd luabind
+# The following line might not be necessary for you,
+# but I needed it to make sure that liblua was in /usr/lib:
+- ln -s /usr/lib/x86_64-linux-gnu/liblua5.1.so /usr/lib/
+- bjam install
+- ln -s /usr/local/lib/libluabindd.so /usr/local/lib/libluabind.so
 - sudo ldconfig
 - make
 - sudo make install
