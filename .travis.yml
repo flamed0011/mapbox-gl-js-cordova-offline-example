@@ -55,7 +55,7 @@ install:
 - export PATH=$PATH:$PWD/mason_packages/.link/bin
 - export LUA_CFLAGS=$(~/.mason/mason cflags lua 5.1.0)
 - echo $LUA_CFLAGS
-- sed -i '1s/.*/$LUA_CFLAGS)/' Makefile
+- sed -i '1s/.*/$LUA_CFLAGS/' Makefile
 - cat Makefile
 - export LUA_LIBS=$(~/.mason/mason ldflags luabind_lua51 dev)
 - make
