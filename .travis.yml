@@ -56,7 +56,8 @@ install:
 - export LUA_CFLAGS=$(~/.mason/mason cflags lua 5.1.0)
 - export LUA_LIBS=$(~/.mason/mason ldflags lua 5.1.0)
 - sed -i '1s|.*|LUA_CFLAGS := '"$LUA_CFLAGS"'|' Makefile
-- sed -i '2s|.*|LUA_LIBS := '"$LUA_LIBS"'|' Makefile
+- sed -i '2s|.*|LUA_LIBS := -llua|' Makefile
+- sed -i '3s|.*|-O3 -Wall -Wno-unknown-pragmas -Wno-sign-compare -std=c++11 -pthread -Wl,--no-as-needed -ldl|' Makefile
 - cat Makefile
 - export LUA_LIBS=$(~/.mason/mason ldflags luabind_lua51 dev)
 - make
