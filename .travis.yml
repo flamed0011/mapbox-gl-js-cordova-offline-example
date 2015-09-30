@@ -54,6 +54,9 @@ install:
 - export CPATH=./mason_packages/.link/include
 - export LIBRARY_PATH=./mason_packages/.link/lib
 - export PATH=$PATH:$PWD/mason_packages/.link/bin
+- sudo apt-get install locate
+- sudo updatedb
+- locate liblua
 - sudo ldconfig
 - make
 - sudo make install
