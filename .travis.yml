@@ -59,7 +59,7 @@ install:
 - ln -s /usr/lib/x86_64-linux-gnu/liblua5.1.so /usr/lib/
 - bjam install
 - ln -s /usr/local/lib/libluabindd.so /usr/local/lib/libluabind.so
-- sudo ldconfig
+- sudo ldconfig 
 - make
 - sudo make install
 - cd ..
