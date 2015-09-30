@@ -49,7 +49,6 @@ install:
 - ~/.mason/mason install sqlite 3.8.10.2
 - ~/.mason/mason link sqlite 3.8.10.2
 # build and install tilemaker (modified compilation flags)
-- sed -i -e 's/c++11/c++11 -pthread -Wl,--no-as-needed -ldl/g' Makefile
 - export CPATH=./mason_packages/.link/include
 - export LIBRARY_PATH=./mason_packages/.link/lib
 - export PATH=$PATH:$PWD/mason_packages/.link/bin
