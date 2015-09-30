@@ -54,6 +54,8 @@ install:
 - export LIBRARY_PATH=./mason_packages/.link/lib
 - export PATH=$PATH:$PWD/mason_packages/.link/bin
 - export LUA_CFLAGS=$(~/.mason/mason cflags luabind_lua51 dev)
+- sed -i 'Ns/.*/$(LUA_CFLAGS)/' file.txt
+- cat Makefile
 - export LUA_LIBS=$(~/.mason/mason ldflags luabind_lua51 dev)
 - make
 - sudo make install
