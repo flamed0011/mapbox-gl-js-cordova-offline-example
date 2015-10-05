@@ -18,6 +18,7 @@ git checkout -b temp
 git branch -f master temp
 git checkout master
 git add dev/android-armv7-debug.apk
+git add www/hamburg.mbtiles
 git commit -m "Android release for SDK 22 [ci skip]"
 git config --global push.default simple
 git push
