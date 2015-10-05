@@ -1,6 +1,6 @@
 # Created by .gitignore support plugin (hsz.mobi)
 ionic.project
 npm-debug.log
-platforms
-plugins
-platforms/*
+platforms/
+plugins/
+.idea/
