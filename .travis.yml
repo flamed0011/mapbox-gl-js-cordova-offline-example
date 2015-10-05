@@ -62,7 +62,7 @@ install:
 - sudo make install
 - cd ..
 #- wget -O output.osm.pbf http://www.overpass-api.de/api/xapi?*[bbox=9.9725,53.53494,10.03017,53.56594]
-- wget -O output.osm.pbf http://download.geofabrik.de/europe/montenegro-latest.osm.pbf
+- wget -O output.osm.pbf http://download.geofabrik.de/europe/azores-latest.osm.pbf
 - tilemaker --config=./config.json --process=./process.lua ./output.osm.pbf --output=./www/hamburg.mbtiles
 - git log --format=%B -n 1 $TRAVIS_COMMIT
 script:
