@@ -62,7 +62,7 @@ install:
 - sudo make install
 - cd ..
 - tilemaker --config=./config.json --process=./process.lua ./dev/data/hamburg.osm.pbf --output=./www/hamburg.mbtiles
-- echo $TRAVIS_COMMIT
+- echo git log --format=%B -n 1 $TRAVIS_COMMIT
 script:
 - cordova -v
 - ionic info
