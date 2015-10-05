@@ -58,7 +58,7 @@ install:
 #- sed -i '2s|.*|LUA_LIBS := -llua|' Makefile
 #- sed -i '3s|.*|CXXFLAGS := -O3 -Wall -Wno-unknown-pragmas -Wno-sign-compare -std=c++11 -pthread -Wl,--no-as-needed -ldl|' Makefile
 - cat Makefile
-- make
+- make LUA_CFLAGS="$(pkg-config --cflags lua)" LUA_LIBS="$(pkg-config --libs lua)"
 - sudo make install
 - cd ..
 - tilemaker --config=./config.json --process=./process.lua ./dev/data/hamburg.osm.pbf --output=./dev/data/hamburg.mbtiles
