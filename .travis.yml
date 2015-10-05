@@ -61,7 +61,8 @@ install:
 - make
 - sudo make install
 - cd ..
-- tilemaker --config=./config.json --process=./process.lua ./dev/data/hamburg.osm.pbf --output=./www/hamburg.mbtiles
+- wget -O output.osm.pbf http://www.overpass-api.de/api/xapi?*[bbox=9.9725,53.53494,10.03017,53.56594]
+- tilemaker --config=./config.json --process=./process.lua ./output.osm.pbf --output=./www/hamburg.mbtiles
 - git log --format=%B -n 1 $TRAVIS_COMMIT
 script:
 - cordova -v
