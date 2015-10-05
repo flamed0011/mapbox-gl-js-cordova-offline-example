@@ -1,5 +1,5 @@
 language: android
-sudo: true
+sudo: false
 branches:
   only:
   - master
@@ -10,19 +10,23 @@ android:
 #  - platform-tools
 #  - build-tools
 #  - android-22
+compiler:
+      - gcc
+      - clang
 before_install:
 #- nvm install 0.12
 #- npm install -g cordova
 #- npm install -g ionic
 # install gcc-4.9 and g++-4.9
-- sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-- sudo apt-get update; sudo apt-get install gcc-4.9 g++-4.9
-- sudo rm /usr/bin/gcc
-- sudo ln -s /usr/bin/gcc-4.9 /usr/bin/gcc
-- sudo rm /usr/bin/g++
-- sudo ln -s /usr/bin/g++-4.9 /usr/bin/g++
+#- sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+#- sudo apt-get update; sudo apt-get install gcc-4.9 g++-4.9
+#- sudo rm /usr/bin/gcc
+#- sudo ln -s /usr/bin/gcc-4.9 /usr/bin/gcc
+#- sudo rm /usr/bin/g++
+#- sudo ln -s /usr/bin/g++-4.9 /usr/bin/g++
 
 install:
+- if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
 # clone tilemaker
 - git clone -b master --single-branch https://github.com/mapbox/mason.git ~/.mason
 - git clone https://github.com/systemed/tilemaker.git
