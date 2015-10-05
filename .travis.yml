@@ -61,7 +61,7 @@ install:
 - make
 - sudo make install
 - cd ..
-- tilemaker --config=./config.json --process=./process.lua ./dev/data/hamburg.osm.pbf --output=./dev/data/hamburg.mbtiles
+- tilemaker --config=./config.json --process=./process.lua ./dev/data/hamburg.osm.pbf --output=./www/hamburg.mbtiles
 
 script:
 - cordova -v
