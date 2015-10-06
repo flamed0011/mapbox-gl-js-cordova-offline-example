@@ -63,7 +63,8 @@ install:
 - cd ..
 #- wget -O output.osm.pbf http://www.overpass-api.de/api/xapi?*[bbox=9.9725,53.53494,10.03017,53.56594]
 - wget -O input.osm.pbf http://download.geofabrik.de/europe/faroe-islands-latest.osm.pbf
-- tilemaker --config=./config.json --process=./process.lua ./dev/data/hamburg.osm.pbf --output=./www/hamburg.mbtiles
+- ls -lah
+- tilemaker --config=./config.json --process=./process.lua ./input.osm.pbf --output=./www/hamburg.mbtiles
 - git log --format=%B -n 1 $TRAVIS_COMMIT
 script:
 - cordova -v
